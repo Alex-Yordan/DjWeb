@@ -1,0 +1,42 @@
+{% load static %}
+
+<aside class="sidebar">
+  <div class="logo">
+    <img src="{% static 'test/img/logo.jpg' %}" alt="SmileDjango Logo" width="60" class="rounded">
+    <span class="h4 mb-0">SmileDjango</span>
+  </div>
+  <ul class="nav flex-column">
+    <!-- Главная страница -->
+    <li class="nav-item">
+      <a class="nav-link {% if request.path == '' %}active{% endif %}" href="{% url 'home' %}">
+        <i class="bi bi-house-door-fill me-2"></i>Главная
+      </a>
+    </li>
+    <!-- Остальные страницы -->
+    <li class="nav-item">
+      <a class="nav-link {% if request.path == '/page1/' %}active{% endif %}" href="{% url 'page1' %}">
+        <i class="bi bi-file-earmark-text me-2"></i>Страница 1
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {% if request.path == '/page2/' %}active{% endif %}" href="{% url 'page2' %}">
+        <i class="bi bi-arrow-right-circle me-2"></i>Страница 2
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {% if request.path == '/page3/' %}active{% endif %}" href="{% url 'page3' %}">
+        <i class="bi bi-rocket me-2"></i>Страница 3
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {% if request.path == '/page4/' %}active{% endif %}" href="{% url 'page4' %}">
+        <i class="bi bi-stars me-2"></i>Страница 4
+      </a>
+    </li>
+    <li class="nav-item mt-4">
+      <a class="nav-link" href="#">
+        <i class="bi bi-gear me-2"></i>Настройки
+      </a>
+    </li>
+  </ul>
+</aside>

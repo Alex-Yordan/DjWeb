@@ -1,0 +1,56 @@
+{% extends 'test/layoute.html' %}
+
+{% block title %}Главная — SmileDjango{% endblock %}
+
+{% block content %}
+<div class="p-4 bg-white rounded shadow-sm text-center">
+  <h1 class="display-5 fw-bold">🏡 Добро пожаловать на главную страницу SmileDjango!</h1>
+  <p class="lead mt-3">Это центральный хаб вашего проекта. Отсюда вы можете перейти на любую из четырёх вдохновляющих страниц.</p>
+  
+  <div class="row mt-5 g-4 justify-content-center">
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Страница 1</h5>
+          <p class="card-text">Начало пути. Первые шаги в Django.</p>
+          <a href="{% url 'page1' %}" class="btn btn-outline-primary mt-auto">Перейти</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Страница 2</h5>
+          <p class="card-text">Углубляемся в маршруты и структуру.</p>
+          <a href="{% url 'page2' %}" class="btn btn-outline-primary mt-auto">Перейти</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Страница 3</h5>
+          <p class="card-text">Работа с данными и формами.</p>
+          <a href="{% url 'page3' %}" class="btn btn-outline-primary mt-auto">Перейти</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Страница 4</h5>
+          <p class="card-text">Ты почти легенда. Что дальше?</p>
+          <a href="{% url 'page4' %}" class="btn btn-outline-primary mt-auto">Перейти</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-5 p-3 bg-light rounded">
+    <p class="mb-0">
+      <i class="bi bi-lightbulb-fill text-warning"></i> 
+      Совет: Пройдите все страницы по порядку — каждая раскрывает новую ступень мастерства в Django!
+    </p>
+  </div>
+</div>
+{% endblock %}

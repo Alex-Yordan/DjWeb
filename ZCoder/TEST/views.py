@@ -1,12 +1,18 @@
+# test/views.py
+
 from django.shortcuts import render
-from django.http import HttpResponse
 
-# Create your views here.
-def index(request):
-    return HttpResponse("<h1> Главная страница проекта на Джанго </h1>")
+def home(request):
+    return render(request, 'test/home.html')
 
-def test(request):
-    return HttpResponse("<h1> Страница Test </h1>")
+def page1(request):
+    return render(request, 'test/page1.html')
 
-def data(request):
-    return HttpResponse("<h1> Страница Data </h1>")
+def page2(request):
+    return render(request, 'test/page2.html')
+
+def page3(request):
+    return render(request, 'test/page3.html')
+
+def page4(request):
+    return render(request, 'test/page4.html')
